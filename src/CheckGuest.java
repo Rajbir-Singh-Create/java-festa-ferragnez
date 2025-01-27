@@ -22,6 +22,16 @@ public class CheckGuest {
             }
         }
 
+        // BONUS: usando il ciclo While
+        int i = 0;
+        while(i < listaInvitati.length){
+            // System.out.println(listaInvitati[i]);
+            if(listaInvitati[i].equals(name)){
+                checkName = listaInvitati[i];
+            }
+            i++;
+        }
+
         // Controllo se l'input dell'utente corrisponde ad uno degli elementi nell'array
         // Decido se farlo entrare o no
         if (name.equals(checkName)){
