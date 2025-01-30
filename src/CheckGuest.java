@@ -11,14 +11,17 @@ public class CheckGuest {
         String name = nameInput.nextLine();
 
         // Inizializzo una variabile per fare un controllo
-        String checkName = null;
+        boolean checkName = false;
+        // In alternativa:
+        // int checkName = -1;
 
         // Itero l'array e se l'input dell'utente corrisponde ad uno degli elementi dell'array
-        // lo salvo nella variabile che ho inizializzato in precedenza
+        // cambio lo stato della variabile che ho inizializzato in precedenza
         for (int i = 0; i < listaInvitati.length; i++){
             // System.out.println(listaInvitati[i]);
             if(listaInvitati[i].equals(name)){
-                checkName = listaInvitati[i];
+                checkName = true;
+                // checkName = i;
             }
         }
 
@@ -27,14 +30,14 @@ public class CheckGuest {
         while(i < listaInvitati.length){
             // System.out.println(listaInvitati[i]);
             if(listaInvitati[i].equals(name)){
-                checkName = listaInvitati[i];
+                checkName = true;
+                // checkName = i;
             }
             i++;
         }
 
-        // Controllo se l'input dell'utente corrisponde ad uno degli elementi nell'array
-        // Decido se farlo entrare o no
-        if (name.equals(checkName)){
+        // Controllo sulla variabile e decido se farlo entrare o no
+        if (checkName){
             System.out.println("Puoi entrare. Benvenuto/a!");
         } else {
             System.out.println("Non sei nell'elenco degli invitati. Non puoi entrare.");
