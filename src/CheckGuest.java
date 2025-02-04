@@ -20,8 +20,10 @@ public class CheckGuest {
         for (int i = 0; i < listaInvitati.length; i++){
             // System.out.println(listaInvitati[i]);
             if(listaInvitati[i].equals(name)){
+                System.out.println("Puoi entrare. Benvenuto/a!");
                 checkName = true;
                 // checkName = i;
+                break;
             }
         }
 
@@ -30,16 +32,16 @@ public class CheckGuest {
         while(i < listaInvitati.length){
             // System.out.println(listaInvitati[i]);
             if(listaInvitati[i].equals(name)){
+                System.out.println("Puoi entrare. Benvenuto/a!");
                 checkName = true;
                 // checkName = i;
+                break;
             }
             i++;
         }
 
         // Controllo sulla variabile e decido se farlo entrare o no
-        if (checkName){
-            System.out.println("Puoi entrare. Benvenuto/a!");
-        } else {
+        if (!checkName){
             System.out.println("Non sei nell'elenco degli invitati. Non puoi entrare.");
         }
     }
